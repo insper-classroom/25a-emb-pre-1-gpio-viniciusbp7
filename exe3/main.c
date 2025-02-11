@@ -36,6 +36,8 @@ int main() {
         gpio_put(LED_RED,0);
         red_on=false;
       }
+      while (!gpio_get(BTN_PIN_RED)) {
+      };
     }
     if (!gpio_get(BTN_PIN_GREEN)) {
       if(!green_on){
@@ -46,6 +48,8 @@ int main() {
         gpio_put(LED_GREEN,0);
         green_on=false;
       }
+      while (!gpio_get(BTN_PIN_GREEN)) {
+      };
     }
 
   }
